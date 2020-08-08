@@ -1,5 +1,6 @@
 # Data Sharing System Integrating Access Control Mechanism using Blockchain-Based Smart Contracts for IoT Devices
 ![캡처](https://user-images.githubusercontent.com/68576770/89714254-4e6ab200-d9d8-11ea-8d67-19a39a9aff41.PNG)
+- data sharing and access control system between IoT devices to achieve trustfulness, authorization and authentication using smart contracts
 # Problem Statement
 - growth of the IoT networks results in many challenges such as illegitimate data sharing, unauthorized access control, unauthenticated users, single point of failure due to centralization, etc.
 - for interacting between IoT devices, the blockchain-based system need to achieve:
