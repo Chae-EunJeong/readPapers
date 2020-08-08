@@ -27,9 +27,9 @@
 - misbehaviors conducted by the subject are:
   - subject sends frequent and too many requests
   - subject cancels its generated request
-1. after misbehavior, corresponding penalty is determined then, state of subject halted and subject cannot send requests for a certain time period
+- 1. after misbehavior, corresponding penalty is determined then, state of subject halted and subject cannot send requests for a certain time period
 ![image](https://user-images.githubusercontent.com/68576770/89715326-e5873800-d9df-11ea-9efa-47106108338c.png)
-2. if no misbehavior, permision levels are checked
+- 2. if no misbehavior, permision levels are checked
 ![image](https://user-images.githubusercontent.com/68576770/89715373-4747a200-d9e0-11ea-9d69-6525f1a1fd7a.png)
 
 # Reference
