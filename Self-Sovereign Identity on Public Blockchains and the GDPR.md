@@ -1,0 +1,1 @@
+# Self-Sovereign Identity on Public Blockchains and the GDPR
