@@ -39,3 +39,25 @@
 - IPFS : DID documents(DDO)를 저장한다.
 - Private Storage : local, cloud
                     uPort처럼 credentials와 key recovery를 저장하는 local 저장소를 지원한다.
+# The European General Data Protection Regulation
+- GDPR은 personal data의 처리만을 규제한다.
+- GDPR은 controllers, processors, data subjects 를 구분한다.    
+    - controller : 처리의 목적과 수단을 결정
+    - processor : 컨트롤러 대신 데이터를 처리
+    - data subject : 권리와 보호에 귀속
+### How does GDPR apply to SSI?
+- GDPR은 personal data에만 적용된다.
+    - personal data : 식별가능한 사람과 관련된 정보
+- 본 논문에서는 SSI의 4가지 타입의 데이터를 다룬다.
+    - DIDs
+    - Credentials
+    - Revocations of credentials
+    - Hashes of one of the first three or other objects
+- personal data로 간주되려면 데이터 주체에 대한 정보가 context를 통해 전달되어야 한다.
+- 따라서 credentials와 revocations는 personal data이다.
+- DIDs와 personal data의 hashes의 경우
+    - 데이터 주체가 생성한 DID는 연결된 개인키로 서명되어 DID의 제어를 증명한다.
+    - DID를 여러번 사용하면 식별자처럼 작동되어 다른 속성이나 credentials와 연결될 수 있다.
+
+    - 단방향 함수인 암호화 해시함수를 사용한 객체가 있을 때, 객체에 충분한 엔트로피가 포함되지 않은 경우 가능한 모든 값을 시도하여 원래 객체를 알아낼 수 있다.
+    - personal data로 간주되기 위해서는 해시 값으로 주체를 식별하는 것만으로는 충분하지 않으며, 해시된 객체의 context는 원래 객체에 포함되지 않은 추가 정보를 전달해야 한다.
