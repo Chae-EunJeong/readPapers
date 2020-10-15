@@ -61,3 +61,40 @@
 
     - 단방향 함수인 암호화 해시함수를 사용한 객체가 있을 때, 객체에 충분한 엔트로피가 포함되지 않은 경우 가능한 모든 값을 시도하여 원래 객체를 알아낼 수 있다.
     - personal data로 간주되기 위해서는 해시 값으로 주체를 식별하는 것만으로는 충분하지 않으며, 해시된 객체의 context는 원래 객체에 포함되지 않은 추가 정보를 전달해야 한다.
+### Who is controller of DIDs, credentials and revocations of credentials?
+> DIDs와 블록체인에 저장된 hashes의 controller를 결정할 때는 case-by-case 분석이 필요함
+- Controller : GDPR의 의무를 따를 책임이 있는 person 혹은 entity
+    - joint(공동) controller : 여러 컨트롤러가 공동으로 처리 목적과 수단 정의 가능
+    - To determine controller : 데이터가 블록체인에 저장되었는지 여부에 따라 나누어서 결정한다.
+- 1. Not store on a blockchain : Sovrin, uPort, Jolocom
+    - controller는 발급 기관 / agent / cloud provider / data subject 가 될 수 있다.
+    - SSI 시스템에서 data subject가 credential을 추가하는 controller가 될 수 있지만, credential을 revocation할 때는 발급자가 controller로 간주된다.
+    - data subject가 data에 대한 controller일 때는 GDPR이 적용되지 않지만,
+    data subject를 대신해서 data를 처리하는 processor에는 적용된다.
+- 2. Stored on a blockchain : DIDs
+    - (1) The controller on the blockchain level
+        - public blockchain 
+            - uPort와 Jolocom 등
+            - CNIL(French data protection authority)는 node operators와 miners를 controller로 간주하지는 않으나 가능성은 열어둔다.
+            - 블록체인 수준의 controller는 없다.
+        - permissioned blockchain
+            - Sovrin 등
+            - entity나 consortium이 permissions를 결정하기 때문에 controller로 간주된다.
+    - (2) The controller on the transaction level
+        - transaction을 개인키로 서명하고 블록체인으로 전송하는 사람이 controller로 간주된다.
+    - (3) The controller on the smart contract level
+        - CNIL은 smart contract 개발자를 controller로 간주한다.
+            - 그러나, 단순한 코드의 공급자나 프로토콜 개발자는 controller로 여기지 않는다.
+### Justification
+- personal data의 처리에 필요한 justification은 GDPR Art.에서 제공된다.
+- justification은 credentials와 revocation에 동의 혹은 계약이 필요한 것 처럼 case-by-case 분석이 필요하다.
+### Right to erasure / right to be forgotten
+- 블록체인 기반 시스템에서 controller가 data subject에 대해 가져야 할 의무 중 삭제할 권리와 잊혀질 권리가 문제가 된다.
+- DIDs(hashes of credentials or hashes of revocations)가 블록체인에 저장되면 case-by-case 분석을 해서 data가 계속 personal data인지 확인해야 한다.
+    - hase된 개체가 안전하게 삭제되었다면 personal data로 간주되던 hashes는 더이상 personal data로 간주되지 않는다.
+### Revocations of credentials
+- revocation은 personal data로 간주되며, justification이 필요하다. 
+- revocation을 볼 근거가 있는 사람만 사용할 수 있기 때문에 revocation을 최소화할 수 있다.
+# conclusion
+- SSI는 중앙기관 없이 data subject가 credential을 제어하여 개인 정보를 보호하고 GDPR을 준수할 수 있다.
+- 그러나 use-case별 분석이 요구된다는 것과 기존 법의 불확실성 때문에 기술의 사용에는 부담이 된다.
