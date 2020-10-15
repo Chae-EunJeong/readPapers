@@ -29,7 +29,7 @@
                     서명된 메시지는 DID를 포함한다.
 - uPort Registry : attribute와 identity를 연결할 때 쓰는 contract.
                     ID에 대한 IPFS hash를 찾을 수 있다.
-- IPFS(Interplanetary File System) : DID document를 저장하는 파일 시스템
+- IPFS(Interplanetary File System) : DID document를 저장하는 파일 시스템.
                                     identity에 해당하는 public key를 가지고 있다.
                                     DID document에서 public key를 추출하여 서명을 검증한다.
 ### Jolocom
@@ -97,4 +97,4 @@
 - revocation을 볼 근거가 있는 사람만 사용할 수 있기 때문에 revocation을 최소화할 수 있다.
 # conclusion
 - SSI는 중앙기관 없이 data subject가 credential을 제어하여 개인 정보를 보호하고 GDPR을 준수할 수 있다.
-- 그러나 use-case별 분석이 요구된다는 것과 기존 법의 불확실성 때문에 기술의 사용에는 부담이 된다.
+- 그러나 use-case별 분석이 요구된다는 것과 기존 법의 불확실성 때문에 기술의 사용에 있어서는 부담이 된다.
