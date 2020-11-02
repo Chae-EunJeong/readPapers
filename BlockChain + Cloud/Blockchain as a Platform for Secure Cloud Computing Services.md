@@ -17,7 +17,7 @@
 - 3-1. 이미 같은 hash가 있다면, 파일이 이미 있는 것이므로, block한다.
 - 3-2. 비교 후 문제가 없으면 cloud의 Catch와 DB unit에 Read와 write 한다.
 2) Downloading on cloud@blockchain
-![image](https://user-images.githubusercontent.com/68576770/97246228-2bfe6d00-1840-11eb-9ff2-841b2e18dd1c.png)
+![image](https://user-images.githubusercontent.com/68576770/97822903-aa548680-1cfa-11eb-87a2-fff14535e03e.png)
 - 1. download 요청을 받으면 cloud는 blockchain에서 metadata를 읽어온다.
 - 2. cloud의 download unit에서 SimHash를 사용해 Auth System에서 유사성 비교를 한다.(요청받은 파일과 읽어온 metadata 간 유사성 비교?)
 - 3. Catch와 DB unit에서 Read 한다.
