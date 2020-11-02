@@ -14,8 +14,8 @@
 ![image](https://user-images.githubusercontent.com/68576770/97245861-513eab80-183f-11eb-8671-1085cce82981.png)
 - 1. file information(Metadata)을 blockchain에 올리고, Cloud에 파일을 upload한다.
 - 2. cloud는 blockchain에서 metadata를 읽어와, file의 hash를 Auth System을 통해 비교한다.
-- 3-1. 이미 같은 hash가 있다면, 파일이 이미 있는 것이므로, block한다.
-- 3-2. 비교 후 문제가 없으면 cloud의 Catch와 DB unit에 Read와 write 한다.
+- 3-1. 비교 후 문제가 없으면 cloud의 Catch와 DB unit에 Read/Write 작업 수행
+- 3-2. 이미 같은 hash가 있다면, 파일이 이미 있는 것이므로, block한다.
 2) Downloading on cloud@blockchain
 ![image](https://user-images.githubusercontent.com/68576770/97822903-aa548680-1cfa-11eb-87a2-fff14535e03e.png)
 - 1. download 요청을 받으면 cloud는 blockchain에서 metadata를 읽어온다.
