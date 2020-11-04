@@ -19,3 +19,9 @@
     - Block Structure : ProvChain은 block header와 transaction lists으로 구성
         - block header : block hash, height(block index), comfirmations, nonce, merkle root
         - transaction lists : 각 data record는 해시되어 merkle tree node가 되고, merkle tree root node는 한 블록에서의 하나의 트랜잭션이 된다.
+- Key Establishment
+    - Provenance Auditor(PA)를 완전히 신뢰할 수 없기 때문에 키를 생성하여 데이터를 보호한다.
+        - User Registration Key : user는 cloud data를 운영하기 위해 registration key를 생성한다.
+        - Data Encryption Key : user는 encryption key를 생성하여, 클라우드에 저장될 데이터를 암호화하여 key holder외의 접근을 제어한다.
+        - Data Sharing Public/Private Key Pair : data owner는 private key로 서명하고, owner외의 사람들은 public key로 ownership을 검증한다.  private key를 공유하여 ownership을 변경해서 데이터를 공유한다.
+        - Provenance Verification Key : cloud service provider가 provenance verification key를 생성하여 provenance auditor와 공유한다.
