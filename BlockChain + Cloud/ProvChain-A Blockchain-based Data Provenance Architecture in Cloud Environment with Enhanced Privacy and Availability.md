@@ -25,3 +25,7 @@
         - Data Encryption Key : user는 encryption key를 생성하여, 클라우드에 저장될 데이터를 암호화하여 key holder외의 접근을 제어한다.
         - Data Sharing Public/Private Key Pair : data owner는 private key로 서명하고, owner외의 사람들은 public key로 ownership을 검증한다.  private key를 공유하여 ownership을 변경해서 데이터를 공유한다.
         - Provenance Verification Key : cloud service provider가 provenance verification key를 생성하여 provenance auditor와 공유한다.
+### Implementation of ProvChain
+- User는 cloud에 저장된 data에 일어나는 모든 operation을 metadata로 명시하고, data record는 blockchain network로 publish되며, blockchain receipt가 생성되어 provenance auditor가 validation을 요청했을 때 쓰인다. Provanence data와 validation은 provenance database에 저장된다.
+- data record : Merkle tree로 hash된 형태
+- blockchain receipt : information of blockchain transaction, Merkle proof and Merkle root 등으로 구성
