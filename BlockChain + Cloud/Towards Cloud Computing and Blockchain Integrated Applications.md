@@ -1,4 +1,5 @@
 # Towards Cloud Computing and Blockchain Integrated Applications
+- cloud computing과 blockchain의 통합을 위한 preliminary discussion에 대한 논문
 - cloud resource를 활용한 blockchain service 제공을 위해 고려해야할 것으로 1)Integration aspects, 2)Modeling, 3)Environment quality and Attribute metrics, 4)Smart contracts and Cloud computing 가 있다.
 # Discussion
 ### 1. Integration Aspects
