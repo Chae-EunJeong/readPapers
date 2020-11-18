@@ -5,3 +5,9 @@
 - (문제 : 데이터 통제력 상실)데이터가 관리자 시스템을 벗어나면, 제어가 더이상 불가능해지며, 데이터 남용과 여러 법적 문제가 발생할 수 있다.
 - 대책으로는 암호화방법이 있으나 문제 해결을 위해 충분하지 않다.
 - 블록체인이 가진 특징들을 사용해 적합한 솔루션을 찾는 것이 가능하다.
+### A. Blockchain Network
+### B. Cryptographic Keys
+- Requestor private key : 데이터 접근 요청에 서명할 때
+- Requestor public key : 데이터 소유자에게 전송되는 공개키이자, authenticator가 패키지를 요청자에게 보낼 때 사용
+- Authenticator contract key : report를 암호화할 때 쓰이는 패키지의 smart contract에 첨부됨
+### C. Triggers
