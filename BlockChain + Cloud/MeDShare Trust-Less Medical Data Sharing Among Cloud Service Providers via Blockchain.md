@@ -24,3 +24,6 @@
         - requestor가 수신하면, decrypt해서 해당 데이터 사용
     - requestor로부터 data owner에게 데이터에 대해 수행된 actions의 전송을 안전하게 하기 위해서, 데이터에 플래그가 붙은 암호화 함수로부터 생성된 actions의 report는, data owner로부터 생성된 contracts에 태그된 authenticator contract key를 사용해 암호화되어야하며, 보안된 database로 전송되어야한다.
 ### C. Triggers
+- query 구조와 블록체인 환경 사이의 프로세스들을 연결하는 entity
+- smart contract가 시스템 외부에서 MedShare 시스템으로 직접 연결될 수 있도록 구현
+    - Data Query Layer와 Data Structuring and Provenance Layer 사이의 중개자 역할
