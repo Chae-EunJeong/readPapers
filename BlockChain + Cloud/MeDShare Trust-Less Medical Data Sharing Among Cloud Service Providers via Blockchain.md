@@ -30,4 +30,13 @@
 # System Model
 * 1) User layer : 연구를 목적으로 데이터를 분석하기 위해 데이터에 접근하는 모든 사용자 부류
     - ex) hospitals, research institutions, universities, government bodies
-* 2) Data Query layer : 
+* 2) Data Query layer : 시스템의 쿼리에 접근, 처리, 전달, 응답하는 쿼리 구조의 집합(sets of querying structures)으로 구성되어있다. 1) 사용자와 3) Data Structuring and Provenance layer 사이에서 actions를 해석하고 변환함. 
+    - Querying system : 3) Data Structuring and Provenance layer에서 원하는 형식으로 request를 처리하는 역할. requestor는 query system이 처리한 쿼리를 전송하고, query system은 requester에게 response를 전송
+    - Trigger : smart contract 환경에서 혹은 환경으로부터 오는 actions를 젼환하는 역할
+* 3) Data Structuring and Provenance layer : 데이터 접근 관련 요청 처리와 인증을 하는 역할. 4) Existing Database Infrastructure layer의 데이터 접근 요청 처리. 데이터에 대한 계산을 추가로 수행함. 완료된 모든 actions의 결과는 broadcast되어 trustless하고 fair한 감사를 보장. 전체 시스템의 데이터 접근과 관련된 모든 requests와 actions를 인증할 책임을 가짐
+    - Authenticator : 요청자가 소유자에게 보낸 요청의 합법성을 확인하는 역할. authenticator contract keys를 생성. encryption key에 태그를 지정. 요청한 데이터가 포함된 패키지 암호화.
+    - Processing and consensus nodes : requests에 대해 생성된 forms을 처리. 요청된 데이터와, requestor에게 전달될 smart contract를 포함한 패키지를 생성
+    - Smart Contracts : 전송된 데이터에 대해 수행된 actions를 식별하고, data를 database에 report하는 역할. 암호화 키를 가지고 있어서 생성된 보고서를 암호화할 수 있다. 허가받지 않은 requestor에 대한 접근 취소
+    - Smart Contract Permissioned Database : contracts 위반시 데이터 소유자가 수행할 작업 목록이 저장되며, 활성화된 actions에 대한 receipts가 보관됨
+    - Blockchain Network : 데이터의 전달과 요청에 대한 actions를 chronological하게 담은 distributed immutable database. smart contracts에 의해 보고된 특정 데이터와 관련된 actions를 side-block으로 유지
+* 4) Existing Database Infrastructure layer : 개별 당사자가 특정 업무 수행을 위해 미리 구축한 database. 민감한 데이터를 보호하기 위한 보안 메커니즘이 필요함
