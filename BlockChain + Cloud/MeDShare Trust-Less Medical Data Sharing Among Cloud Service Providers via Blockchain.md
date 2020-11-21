@@ -27,3 +27,7 @@
 - query 구조와 블록체인 환경 사이의 프로세스들을 연결하는 entity
 - smart contract가 시스템 외부에서 MedShare 시스템으로 직접 연결될 수 있도록 구현
     - Data Query Layer와 Data Structuring and Provenance Layer 사이의 중개자 역할
+# System Model
+* 1) User layer : 연구를 목적으로 데이터를 분석하기 위해 데이터에 접근하는 모든 사용자 부류
+    - ex) hospitals, research institutions, universities, government bodies
+* 2) Data Query layer : 
