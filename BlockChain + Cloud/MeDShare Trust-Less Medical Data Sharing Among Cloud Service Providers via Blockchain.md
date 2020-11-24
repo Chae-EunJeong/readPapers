@@ -40,3 +40,13 @@
     - Smart Contract Permissioned Database : contracts 위반시 데이터 소유자가 수행할 작업 목록이 저장되며, 활성화된 actions에 대한 receipts가 보관됨
     - Blockchain Network : 데이터의 전달과 요청에 대한 actions를 chronological하게 담은 distributed immutable database. smart contracts에 의해 보고된 특정 데이터와 관련된 actions를 side-block으로 유지
 * 4) Existing Database Infrastructure layer : 개별 당사자가 특정 업무 수행을 위해 미리 구축한 database. 민감한 데이터를 보호하기 위한 보안 메커니즘이 필요함
+# Process of MedShare
+### System setup
+- user가 private key로 서명한 request를 query system으로 전송
+- query system은 받은 request를 triggers로 translate하여 authenticator로 전송
+- authenticator는 user의 public key로 verify
+- 해당 process를 승인할지 삭제할지 결정
+### Request file
+- authenticator는 valid request를 processing and consensus nodes로 전달
+- request를 form으로 처리하는 걸 완료한 processing and consensus nodes는 tag를 하기 위한 data를 얻기 위해 request를 existing database infrastructure layer로 전달
+- existing database infrastructure layer는 form에 맞는 data를 내려받아 processing and consensus nodes에게 전송
