@@ -50,3 +50,19 @@
 - authenticator는 valid request를 processing and consensus nodes로 전달
 - request를 form으로 처리하는 걸 완료한 processing and consensus nodes는 tag를 하기 위한 data를 얻기 위해 request를 existing database infrastructure layer로 전달
 - existing database infrastructure layer는 form에 맞는 data를 내려받아 processing and consensus nodes에게 전송
+- 수신한 timestamp의 해시를 processing and consensus nodes는 해시된 request의 timestamp 기록에 연결 
+- processing and consensus nodes는 요청된 데이터에 대한 set of rules를 추가하기 위해 smart contract center로 전송
+- smart contract가 생성되고, form에 태그 지정
+### Package delivery
+- results는 authenticator로 전달되어 authenticator contract key 생성, 생성된 암호화 키를 smart contract로 태그
+- processing and consensus nodes는 request에 대한 정보를 기반으로 블록을 생성하여 blockchain network로 배포
+- 블록은 ordering 방식으로 이미 존재하는 requestor와 관련된 블록의 일부가 되며 identity로 태그되어 고유하게 식별된다.
+- data는 암호화되고, 암호화된 패키지를 형성하고, requestor의 ID로 태그되어 트리거를 통해 query system으로 전달된다.
+    - package는 data ID, data, smart contract이 포함됨
+- query system은 requestor에게 배포한다.
+### Auditing and provenance
+- requestor는 패키지를 수신하면 자신의 private key를 사용해 decrypt
+- data를 decrypt하기 위해 데이터에 태그된 암호화 키를 받기 위한 smart contract를 활성화해야하며, decrypted data의 action을 암호화하기 위해 query system으로 전송한다.
+- query system은 processing and consensus nodes로 action에 대한 report를 전달
+- processing and consensus nodes는 report를 side-block으로 처리하고, 추적을 위해 그 결과를 parent block에 추가
+    - smart contract에 의해 보고된 데이터와 관련된 actions를 side-block이 blockchain netowrk에 기록하며, side-block은 parent block에 생성된다.
