@@ -66,3 +66,18 @@
 - query system은 processing and consensus nodes로 action에 대한 report를 전달
 - processing and consensus nodes는 report를 side-block으로 처리하고, 추적을 위해 그 결과를 parent block에 추가
     - smart contract에 의해 보고된 데이터와 관련된 actions를 side-block이 blockchain netowrk에 기록하며, side-block은 parent block에 생성된다.
+### Smart contracts
+- MedShare에서 smart contract는 데이터 소유자의 시스템에서 요청자가 수행한 actions를 report할 때 사용된다.
+    - 데이터 소유자는 전송된 데이터의 행방을 모니터링하게 되어 데이터의 출처에 대한 assurance와 control을 얻는다.
+- 데이터 소유자의 시스템에 report된 데이터는 process, index, broadcast된다.
+- basic actions are : read, write, delete, duplicate, move, copy
+- actions는 smart contract를 trigger하여 report를 보낸다.
+- getAction : smart contract scrips로 actions의 모니터링을 전달하는 함수
+- 데이터 sensitivity의 높고 낮음에 따라 smart contract를 수정하여 효과적으로 모니터링한다. 
+- comments : 데이터에 대해 수행된 actions를 설명하는 statements로 생성된다. 보통 violation이나 exemption comments.
+- retrieve는 getAction과 쌍을 이루어 comments를 encrypt하기 위한 key 추출
+- encrypt action을 호출하여 프로세스를 마무리한다.
+- accessControl : 데이터 소유자가 설정한 권한
+- smart contract의 효율적인 운영 보장을 위해 requestor에 의한 실행 가능한 statement를 삽입하는 것이 중요하다.
+- smart contract가 violation action을 받으면, 요청자의 접근 권한을 취소하고 report를 전송한다. 그럼 데이터 소유자는 smart contract permissioned database를 통해 선택적으로 violation을 처리한다.
+
