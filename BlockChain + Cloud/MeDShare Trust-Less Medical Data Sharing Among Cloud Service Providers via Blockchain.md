@@ -80,4 +80,22 @@
 - accessControl : 데이터 소유자가 설정한 권한
 - smart contract의 효율적인 운영 보장을 위해 requestor에 의한 실행 가능한 statement를 삽입하는 것이 중요하다.
 - smart contract가 violation action을 받으면, 요청자의 접근 권한을 취소하고 report를 전송한다. 그럼 데이터 소유자는 smart contract permissioned database를 통해 선택적으로 violation을 처리한다.
+### Data processing and sharing between existing DB infrastructure and data sharing and provenance layer
+![image](https://user-images.githubusercontent.com/68576770/100544206-76d43000-3297-11eb-898a-c961c23e8b16.png)
+- 요청된 데이터를 기존 데이터베이스에서 발행할 때 무결성과 가치를 유지하는 것이 중요함
+- 검증된 요청은 existing database infrastructure에서 복제본을 만들어 consensus node에 할당한다.
+- consensus node는 받은 복제된 데이터로 노드의 고유 ID와 payload를 포함하는 패키지를 생성한다.
+- processing and consensus node는 수신된 데이터를 요청과 비교하여 양식을 확인한다.
+- 데이터의 민감도가 높거나 낮은지 순위가 매겨지는데, 높은 민감도의 dataset은 추가 익명화가 필요하기 때문에, 이런 action은 processing을 통해 블록의 state가 전환될 양식에 기록된다. 
+- 처리된 결과는 두번째 consensus node에 제공되어 첫번째 processing node의 작업을 검증한 후, 검사가 정확하면 첫번째 노드로 반환한다.
+---
+- processing and consensus node가 데이터 민감도 level을 smart contract generator로 보내면, smart contract는 노드에 script를 출력하고, 노드는 데이터의 현재 처리된 상태에 첨부한다.
+- processing and consensus node는 모든 처리 결과, 즉 패키지를 authenticator로 출력한다. 
+- authenticator는 요청자의 public key로 패키지를 암호화하고 timestamp를 노드로 출력한다. 
+- processing and consensus node는 모든 timestamp를 기록하여 효율적으로 최적화하는 것을 가능하게 한다.
+- 데이터에 수행된 모든 actions와 두번째 검증 노드의 ID는 양식에 기록되고 이 양식이 네트워크로 broadcast될 블록으로 처리된다. 
+### Parent block structure
+![image](https://user-images.githubusercontent.com/68576770/100544784-78075c00-329b-11eb-985b-31f39f9daa8c.png)
 
+### Side-block structure
+![image](https://user-images.githubusercontent.com/68576770/100544796-91a8a380-329b-11eb-8f01-f5d192a7db4f.png)
