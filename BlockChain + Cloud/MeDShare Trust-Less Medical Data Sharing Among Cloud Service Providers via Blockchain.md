@@ -96,6 +96,25 @@
 - 데이터에 수행된 모든 actions와 두번째 검증 노드의 ID는 양식에 기록되고 이 양식이 네트워크로 broadcast될 블록으로 처리된다. 
 ### Parent block structure
 ![image](https://user-images.githubusercontent.com/68576770/100544784-78075c00-329b-11eb-985b-31f39f9daa8c.png)
-
+- block header는 SHA256으로 해시되어 불변성을 보장한다.
+- block header is consists of 
+    - data version : 데이터 타입에 따른 유효성 검사 규칙을 나타냄
+    - previous block hash : 해당 블록의 헤더를 변경하지 않고는 이전 블록의 헤더는 변경될 수 없도록 보장 
+    - merkle root : 헤더의 수정 없이는 네트워크의 어떤 블록도 수정될 수 없음을 보장
+    - timestamp : 블록이 생성된 시간 
+    - target difficulty : processing and consensus node에 의해 processing이 어떻게 달성되는지에 대한 값(consensus node의 검증)
+    - nonce : target difficulty 이하의 해시를 생성하기 위해 consensus node가 임의로 생성하는 값
+---
+- action counter는 전체 블록에서 access된 데이터에 적용할 수 있는 violation action의 총합을 기록한다.
+- action counter는 아래와 같이 분류되는 transaction이다.
+    - timestamp is consists of : time to receive request(TTR), time taken to process request(TTP), time to send package to requestor(TTS) 
+    - data is consists of : data owner identity(OID), requestor identity(RID), sensitivity of data(Dsens), purpose of data request(DRP), processing node identity(NID), signature of processing node(Nsig)
+--- 
+- block locktime은 블록이 블록체인에 들어가는 시간을 의미하며, 트랜잭션의 마지막 항목을 기록하고 블록을 폐쇄하여 broadcast될 준비가 된다.
 ### Side-block structure
 ![image](https://user-images.githubusercontent.com/68576770/100544796-91a8a380-329b-11eb-8f01-f5d192a7db4f.png)
+- 사이드 블록은 consensus node에서 생성된 ID에 메인 블록 ID 섹션을 추가하여 파생된다.
+- action counter는 하나의 report에 기록된 violation을 기록하며 아래와 같이 구성되는 transaction이다.
+    - timestamp of violation(TSV), data owner identity(OID), requestor identity(RID), violation(VLN), processing node identity(NID)
+- block은 timelock되어 parent block에 추가하여 블록체인으로 broadcast된다.
+- 그러면, report와 data의 추적이 가능해진다.
