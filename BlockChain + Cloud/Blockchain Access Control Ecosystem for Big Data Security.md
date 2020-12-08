@@ -1,5 +1,5 @@
 # Blockchain Access Control Ecosystem for Big Data Security
-
+- BIBAC BN 혹은 BRBAC BN을 사용해서 블록체인을 데이터에 대한 접근 제어 관리 생태계로 사용하면 데이터 저장소와 분리되어 감사 가능하고 안전하며 유연한 이점을 제공한다.
 # BIBAC vs BRBAC
 ### BIBAC(Blockchain Identity-Based Access Control)
 ![image](https://user-images.githubusercontent.com/68576770/101443829-9fc48700-3961-11eb-8ab5-eb7b84dba3f4.png)
