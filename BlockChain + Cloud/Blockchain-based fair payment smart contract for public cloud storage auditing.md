@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Blockchain-based fair payment smart contract for public cloud storage auditing
 ![image](https://user-images.githubusercontent.com/68576770/103737698-078bf180-5036-11eb-8fe8-0d8bbff37ec8.png)
 - 기존의 블록체인 기반 cloud storage auditing에서 verifier와 CSP가 interact해야하는 단점을 보완하여, smart contract와 csp가 컨트랙트를 실행할 때, 상호작용 없이, non-interactive하게 데이터를 입증하는 스키마
