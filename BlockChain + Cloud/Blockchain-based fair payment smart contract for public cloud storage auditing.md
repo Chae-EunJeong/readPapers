@@ -1,1 +1,0 @@
-# Blockchain-based fair payment smart contract for public cloud storage auditing
