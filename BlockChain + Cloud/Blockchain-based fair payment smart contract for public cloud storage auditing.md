@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Blockchain-based fair payment smart contract for public cloud storage auditing
 ![image](https://user-images.githubusercontent.com/68576770/103737698-078bf180-5036-11eb-8fe8-0d8bbff37ec8.png)
 - 기존의 블록체인 기반 cloud storage auditing에서 verifier와 CSP가 interact해야하는 단점을 보완하여, smart contract와 csp가 컨트랙트를 실행할 때, 상호작용 없이, non-interactive하게 데이터를 입증하는 스키마
@@ -23,7 +22,7 @@
     - 유효성 검사 실패시 T1 활성화 : CPS가 data owner에게 패널티(보상) 지불
   ![image](https://user-images.githubusercontent.com/68576770/103743661-e3cda900-503f-11eb-87e2-2f31dd74b3b0.png)
 ### 3. Smart Contract Platform
-5) verify : public key와 proof로 proof에 대한 correctness 여부를 판단하여 검증
+1) verify : public key와 proof로 proof에 대한 correctness 여부를 판단하여 검증
   - 누구나 (publicly) verify할 수 있다.
 # Reference
 - Wang, Hao, et al. "Blockchain-based fair payment smart contract for public cloud storage auditing." Information Sciences 519 (2020): 348-362.
