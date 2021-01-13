@@ -32,7 +32,7 @@
 # A blockchain-based database proposal for a cloud federation
 - 높은 데이터 무결성 보장과 동시에 성능과 안정성에 대한 요구 사항을 준수하는 two-layer blockchain-based database 제안
 - 두 계층간 상호작용을 통해 성능 향상과 데이터 무결성 보장이 가능
-- 블록체인 기반 데이터베이스는 무결성 보장을 뿐만 아니라 데이터 베이스의 데이터의 완전 분산 제어도 가능
+- 블록체인 기반 데이터베이스는 무결성 보장을 할 뿐만 아니라 데이터 베이스의 데이터의 완전 분산 제어도 가능
 ![image](https://user-images.githubusercontent.com/68576770/98618654-ffb91500-2344-11eb-8f28-5202dc11637e.png)
 ### first-layer: Mining Rotation-based Blockchain
 - 원리
