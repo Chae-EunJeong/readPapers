@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # A Privacy-Preserving E-Commerce System Based on the Blockchain Technology
 - 전자 상거래 시 일어나는 개인 정보 보호 문제를 해결하기 위해 영 지식 증명을 사용하여 소유권을 증명하는 프로토콜
 # Problem statement
