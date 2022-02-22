@@ -1,8 +1,4 @@
 # ProvChain: A Blockchain-based Data Provenance Architecture in Cloud Environment with Enhanced Privacy and Availability
-- 
-
----
-- issue? : 
 ### Architecture of ProvChain System
 ![image](https://user-images.githubusercontent.com/68576770/98079568-5cd14880-1eb7-11eb-83e3-569231b8efb7.png)
 - Consist of : Cloud User, Cloud Service Provider, Provenance Database, Provenance Auditor, Blockchain Network
